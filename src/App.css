@@ -69,6 +69,10 @@
     border: 1px solid #c084fc;
     border-radius: 4px;
   }
+
+  .card:hover {
+    background-color: #c084fc;
+  }
 }
 
 #counters {
