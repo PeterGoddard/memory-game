@@ -40,21 +40,23 @@ const RandomImageButtons = () => {
     setPNGs(array)
 
   };
-
+  
   useEffect(() => {
-    var links = []
+
+    const fetchData = async () => {
+      try {
+        const responses = await Promise.all(pokemon.map(p => fetch('https://pokeapi.co/api/v2/pokemon/'+p)))
+        const data = await Promise.all(responses.map(response => response.json()))
+        setPNGs(data);
+        console.log(data)
+      } catch (error){
+        console.log(error)
+      }
+    };
+
+    fetchData();
     
-    for (let l of pokemon) {
-      fetch('https://pokeapi.co/api/v2/pokemon/'+l)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          links.push(data)
-        });
-    }
-    setPNGs(links);
-      
+  
   }, []);
   return (
     <div> 
