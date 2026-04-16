@@ -67,24 +67,27 @@ const RandomImageButtons = () => {
   
   }, [difficulty]);
   return (
-    <div> 
+    <div id="center"> 
       <div id="cards">
         {pngs.map((png) => (
             <button className="card" key={png.species.name}>
-              <img key={png.species.name} src={png.sprites.front_default} onClick={() => randomize(png.species.name)} className="base" width="170" height="179" alt="" />
+              <img key={png.species.name} src={png.sprites.front_default} onClick={() => randomize(png.species.name)} className="base" alt="" />
             </button>
             
           ))}
       </div>
-      <div key="3" className="counter">
+      <div id="counters">
+        <div key="3" className="counter">
           Count: {count}
+        </div>
+        <div key="4" className="counter">
+            Difficulty: {difficulty}
+        </div>
+        <div key="5" className="counter">
+            High Score: {highscore}
+        </div>
       </div>
-      <div key="4" className="counter">
-          Difficulty: {difficulty}
-      </div>
-      <div key="5" className="counter">
-          High Score: {highscore}
-      </div>
+      
     </div>
 
   );
@@ -96,11 +99,7 @@ function App() {
   
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <RandomImageButtons />
-        </div>
-      </section>
+      <RandomImageButtons />
     </>
   )
 }
