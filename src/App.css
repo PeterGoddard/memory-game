@@ -17,6 +17,10 @@
   #center {
     border-left: 1px solid rgba(192, 132, 252, 0.15);
     border-right: 1px solid rgba(192, 132, 252, 0.15);
+
+    .card:hover {
+      background-color: #c084fc;
+    }
   }
 
 } 
@@ -69,10 +73,6 @@
     border: 1px solid #c084fc;
     border-radius: 4px;
   }
-
-  .card:hover {
-    background-color: #c084fc;
-  }
 }
 
 #counters {
@@ -81,5 +81,6 @@
   place-content: center;
   place-items: center;
 }
+
 
 
