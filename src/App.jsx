@@ -71,7 +71,7 @@ const RandomImageButtons = () => {
       <div id="cards">
         {pngs.map((png) => (
             <button className="card" key={png.species.name}>
-              <img key={png.species.name} src={png.sprites.front_default} onClick={() => randomize(png.species.name)} className="base" alt="" />
+              <img key={png.species.name} src={png.sprites.versions["generation-v"]["black-white"].animated.front_default} onClick={() => randomize(png.species.name)} className="base" alt="" />
             </button>
             
           ))}
