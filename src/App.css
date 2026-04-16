@@ -15,8 +15,8 @@
   }
 
   #center {
-      border-left: 1px solid #2e303a;
-    border-right: 1px solid #2e303a;
+    border-left: 1px solid rgba(192, 132, 252, 0.15);
+    border-right: 1px solid rgba(192, 132, 252, 0.15);
   }
 
 } 
@@ -65,6 +65,9 @@
 
   .card {
     margin: 5px;
+    background-color: rgba(192, 132, 252, 0.15);
+    border: 1px solid #c084fc;
+    border-radius: 4px;
   }
 }
 

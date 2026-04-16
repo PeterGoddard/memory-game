@@ -8,7 +8,7 @@ const RandomImageButtons = () => {
   const [count_list, setCountList] = useState([])
   const [difficulty, setDifficulty] = useState(1)
   var pokemon = ['ditto','pikachu','bulbasaur','charizard','squirtle','weedle','rattata','eevee',
-    'butterfree','pidgey','jigglypuff','zubat']
+    'butterfree','pidgey','jigglypuff','zubat','hydreigon']
   var pokemon_parsed = pokemon.slice(1,difficulty+3+1)
   
 
